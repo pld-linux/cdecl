@@ -1,12 +1,13 @@
 Summary:	Programs for encoding and decoding C and C++ function declarations.
 Name:		cdecl
 Version:	2.5
-Release:	10
+Release:	11
 Copyright:	distributable
 Group:		Development/Tools
-Group(pl)	Programowanie/Narzêdzia
+Group(pl):	Programowanie/Narzêdzia
 Source:		ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 Patch:		cdecl-misc.patch
+BuildPrereq:	byacc
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -26,7 +27,7 @@ make CFLAGS="$RPM_OPT_FLAGS -DUSE_READLINE -s" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
+install -d $RPM_BUILD_ROOT/usr/{bin,share/man/man1}
 
 make BINDIR=$RPM_BUILD_ROOT%{_bindir} MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
 	install
@@ -42,6 +43,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %changelog
+* Mon Jun 07 1999 Jan Rêkorajski <baggins@pld.org.pl>
+  [2.5-11]
+- spec cleanup
+
 * Thu Apr 15 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [2.5-10]
 - added passing $RPM_OPT_FLAGS on compile time,
