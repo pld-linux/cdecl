@@ -1,5 +1,5 @@
 --- cdecl-2.5/cdecl.c.misc	Mon Jan 15 22:54:46 1996
-+++ cdecl-2.5/cdecl.c	Mon Nov 20 11:46:06 2000
++++ cdecl-2.5/cdecl.c	Tue Nov  6 12:13:36 2001
 @@ -63,6 +63,7 @@
  #include <stdio.h>
  #include <ctype.h>
@@ -16,8 +16,59 @@
    int main(int, char **);
    int yywrap(void);
    int dostdin(void);
+@@ -241,7 +241,7 @@
+ /* for unsupported combinations of types. */
+ void mbcheck()
+ {
+-    register int i, j, restrict;
++    register int i, j, restricted;
+     char *t1, *t2;
+ 
+     /* Loop through the types */
+@@ -258,26 +258,26 @@
+ 		if (!(modbits & crosstypes[j].bit))
+ 		    continue;
+ 		/* check the type of restriction */
+-		restrict = crosscheck[i][j];
+-		if (restrict == ALWAYS)
++		restricted = crosscheck[i][j];
++		if (restricted == ALWAYS)
+ 		    continue;
+ 		t1 = crosstypes[i].name;
+ 		t2 = crosstypes[j].name;
+-		if (restrict == NEVER)
++		if (restricted == NEVER)
+ 		    {
+ 		    notsupported("", t1, t2);
+ 		    }
+-		else if (restrict == RITCHIE)
++		else if (restricted == RITCHIE)
+ 		    {
+ 		    if (RitchieFlag)
+ 			notsupported(" (Ritchie Compiler)", t1, t2);
+ 		    }
+-		else if (restrict == PREANSI)
++		else if (restricted == PREANSI)
+ 		    {
+ 		    if (PreANSIFlag || RitchieFlag)
+ 			notsupported(" (Pre-ANSI Compiler)", t1, t2);
+ 		    }
+-		else if (restrict == ANSI)
++		else if (restricted == ANSI)
+ 		    {
+ 		    if (!RitchieFlag && !PreANSIFlag)
+ 			notsupported(" (ANSI Compiler)", t1, t2);
+@@ -286,7 +286,7 @@
+ 		    {
+ 		    (void) fprintf (stderr,
+ 			"%s: Internal error in crosscheck[%d,%d]=%d!\n",
+-			progname, i, j, restrict);
++			progname, i, j, restricted);
+ 		    exit(1); /* NOTREACHED */
+ 		    }
+ 		}
 --- cdecl-2.5/Makefile.misc	Tue Jan 16 00:36:38 1996
-+++ cdecl-2.5/Makefile	Sun Nov 19 23:08:45 2000
++++ cdecl-2.5/Makefile	Tue Nov  6 12:12:01 2001
 @@ -36,7 +36,7 @@
  	lex cdlex.l && mv lex.yy.c cdlex.c
  
