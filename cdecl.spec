@@ -28,7 +28,7 @@ make CFLAGS="$RPM_OPT_FLAGS -DUSE_READLINE -s" \
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
-make BINDIR=$RPM_BUILD_ROOT/usr/bin MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
+make BINDIR=$RPM_BUILD_ROOT%{_bindir} MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
 	install
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
@@ -38,7 +38,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) /usr/bin/*
+%attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 
 %changelog
