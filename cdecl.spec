@@ -9,28 +9,29 @@ Copyright:	distributable
 Group:		Development/Tools
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
-Source:		ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
-Patch:		cdecl-misc.patch
+Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
+Patch0:		cdecl-misc.patch
 BuildRequires:	byacc
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel >= 4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The cdecl package includes the cdecl and c++decl utilities, which are used
-to translate English to C or C++ function declarations and vice versa.
+The cdecl package includes the cdecl and c++decl utilities, which are
+used to translate English to C or C++ function declarations and vice
+versa.
 
 %description -l pl
-Pakiet cdecl zawiera narzêdzia cdecl oraz c++decl, których u¿ywa sie do 
-t³umaczenia deklaracji funkcji C lub C++ na angielski i vice versa.
+Pakiet cdecl zawiera narzêdzia cdecl oraz c++decl, których u¿ywa sie
+do t³umaczenia deklaracji funkcji C lub C++ na angielski i vice versa.
 
 %description -l de
 Dies ist ein Paket zum Übersetzen von Englisch in C/C++
 Funktionsanweisungen und umgekehrt. Nützlich für Programmierer.
 
 %description -l fr
-C'est un package pour traduire de l'anglais en déclarations de fonctions
-C/C++ et vice-versa. Utile pour les programmeurs.
+C'est un package pour traduire de l'anglais en déclarations de
+fonctions C/C++ et vice-versa. Utile pour les programmeurs.
 
 %description -l tr
 Ýngilizceden C/C++ bildirimlerine çeviri iþlemini ve tersini
