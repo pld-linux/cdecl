@@ -4,7 +4,7 @@ Summary(fr):	Traducteur anglais <--> déclarations C/C++
 Summary(tr):	Ýngilizceden C/C++ bildirimlerine çevirici
 Name:		cdecl
 Version:	2.5
-Release:	17
+Release:	18
 Copyright:	distributable
 Group:		Development/Tools
 Group(fr):	Development/Outils
