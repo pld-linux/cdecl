@@ -4,7 +4,7 @@ Summary(fr):	Traducteur anglais <--> déclarations C/C++
 Summary(tr):	Ýngilizceden C/C++ bildirimlerine çevirici
 Name:		cdecl
 Version:	2.5
-Release:	13
+Release:	14
 Copyright:	distributable
 Group:		Development/Tools
 Group(fr):	Development/Outils
@@ -13,6 +13,7 @@ Source:		ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 Patch:		cdecl-misc.patch
 BuildRequires:	byacc
 BuildRequires:	ncurses-devel >= 5.0
+BuildRequires:	readline-devel >= 4.1
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -44,8 +45,9 @@ make CFLAGS="$RPM_OPT_FLAGS -DUSE_READLINE -s" \
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-make BINDIR=$RPM_BUILD_ROOT%{_bindir} MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
-	install
+make install \
+	BINDIR=$RPM_BUILD_ROOT%{_bindir} \
+	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
