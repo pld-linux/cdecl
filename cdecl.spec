@@ -5,7 +5,7 @@ Summary(pl):	Programy do kodowania i dekodowania deklaracji funkcji w C i C++
 Summary(tr):	Ýngilizceden C/C++ bildirimlerine çevirici
 Name:		cdecl
 Version:	2.5
-Release:	19
+Release:	20
 License:	Distributable
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
