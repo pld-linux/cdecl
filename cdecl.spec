@@ -13,6 +13,7 @@ Release:	23
 License:	distributable
 Group:		Development/Tools
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
+# Source0-md5:	29895dab52e85b2474a59449e07b7996
 Patch0:		%{name}-misc.patch
 BuildRequires:	flex
 BuildRequires:	bison
