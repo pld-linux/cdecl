@@ -5,7 +5,7 @@ Summary(pl):	Programy do kodowania i dekodowania deklaracji funkcji w C i C++
 Summary(tr):	Ýngilizceden C/C++ bildirimlerine çevirici
 Name:		cdecl
 Version:	2.5
-Release:	20
+Release:	21
 License:	distributable
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
@@ -13,7 +13,9 @@ Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 Patch0:		%{name}-misc.patch
-BuildRequires:	byacc
+Patch1:		%{name}-glibc.patch
+BuildRequires:	flex
+BuildRequires:	bison
 BuildRequires:	readline-devel >= 4.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,9 +43,11 @@ kullanýþlýdýr.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
+bison -y cdgram.y && mv -f y.tab.c cdgram.c
 %{__make} CFLAGS="%{rpmcflags} %{rpmldflags} -DUSE_READLINE" \
 	LIBS="-lreadline -ltinfo"
 
