@@ -9,7 +9,7 @@ Summary(tr):	›ngilizceden C/C++ bildirimlerine Áevirici
 Summary(uk):	Ù“¡Œ”Ã—‘œ“ English <--> ƒ≈ÀÃ¡“¡√¶ß C/C++
 Name:		cdecl
 Version:	2.5
-Release:	23
+Release:	24
 License:	distributable
 Group:		Development/Tools
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
