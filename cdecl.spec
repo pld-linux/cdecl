@@ -14,7 +14,7 @@ Patch:		cdecl-misc.patch
 BuildRequires:	byacc
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel >= 4.1
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The cdecl package includes the cdecl and c++decl utilities, which are used
