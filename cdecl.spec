@@ -18,9 +18,6 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 The cdecl package includes the cdecl and c++decl utilities, which are used
 to translate English to C or C++ function declarations and vice versa.
 
-You should install the cdecl package if you intend to do C and/or C++
-programming.
-
 %description -l de
 Dies ist ein Paket zum Übersetzen von Englisch in C/C++ Funktionsanweisungen
 und umgekehrt. Nützlich für Programmierer.
