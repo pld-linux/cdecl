@@ -44,7 +44,7 @@ kullanýþlýdýr.
 %patch -p1
 
 %build
-%{__make} CFLAGS="%{!?debug:$RPM_OPT_FLAGS -s}%{?debug:-O -g} -DUSE_READLINE" \
+%{__make} CFLAGS="%{!?debug:$RPM_OPT_FLAGS -s}%{?debug:-O0 -g} -DUSE_READLINE" \
 	LIBS="-lreadline -ltinfo"
 
 %install
