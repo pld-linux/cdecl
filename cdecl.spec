@@ -7,7 +7,7 @@ Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
 Source:		ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 Patch:		cdecl-misc.patch
-BuildPrereq:	byacc
+BuildRequires:	byacc
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
