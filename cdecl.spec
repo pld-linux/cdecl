@@ -4,6 +4,7 @@ Version:	2.5
 Release:	10
 Copyright:	distributable
 Group:		Development/Tools
+Group(pl)	Programowanie/Narzêdzia
 Source:		ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 Patch:		cdecl-misc.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
