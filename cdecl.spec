@@ -1,6 +1,7 @@
 Summary:	Programs for encoding and decoding C and C++ function declarations
 Summary(de):	Übersetzer von Deklarationen zwischen Englisch und C/C++
 Summary(fr):	Traducteur anglais <--> déclarations C/C++
+Summary(pl):	Programy do kodowania i dekodowania deklaracji funkcji w C i C++
 Summary(tr):	Ýngilizceden C/C++ bildirimlerine çevirici
 Name:		cdecl
 Version:	2.5
@@ -23,7 +24,7 @@ used to translate English to C or C++ function declarations and vice
 versa.
 
 %description -l pl
-Pakiet cdecl zawiera narzêdzia cdecl oraz c++decl, których u¿ywa sie
+Pakiet cdecl zawiera narzêdzia cdecl oraz c++decl, których u¿ywa siê
 do t³umaczenia deklaracji funkcji C lub C++ na angielski i vice versa.
 
 %description -l de
@@ -44,7 +45,7 @@ kullanýþlýdýr.
 %patch -p1
 
 %build
-%{__make} CFLAGS="%{!?debug:$RPM_OPT_FLAGS -s}%{?debug:-O0 -g} -DUSE_READLINE" \
+%{__make} CFLAGS="%{rpmcflags} %{rpmldflags} -DUSE_READLINE" \
 	LIBS="-lreadline -ltinfo"
 
 %install
