@@ -1,13 +1,14 @@
 Summary:	Programs for encoding and decoding C and C++ function declarations.
 Name:		cdecl
 Version:	2.5
-Release:	11
+Release:	12
 Copyright:	distributable
 Group:		Development/Tools
 Group(pl):	Programowanie/Narzêdzia
 Source:		ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 Patch:		cdecl-misc.patch
 BuildRequires:	byacc
+BuildRequires:	ncurses-devel >= 5.0
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -23,7 +24,7 @@ programming.
 
 %build
 make CFLAGS="$RPM_OPT_FLAGS -DUSE_READLINE -s" \
-	LIBS="-lreadline -lncurses"
+	LIBS="-lreadline -ltinfo"
 
 %install
 rm -rf $RPM_BUILD_ROOT
