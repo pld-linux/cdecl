@@ -6,7 +6,7 @@ Summary(tr):	Ýngilizceden C/C++ bildirimlerine çevirici
 Name:		cdecl
 Version:	2.5
 Release:	20
-License:	Distributable
+License:	distributable
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
