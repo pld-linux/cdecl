@@ -1,5 +1,5 @@
---- cdecl-2.5/cdecl.c.ewt	Fri Aug  9 15:46:58 1996
-+++ cdecl-2.5/cdecl.c	Fri Aug  9 15:47:06 1996
+--- cdecl-2.5/cdecl.c.misc	Mon Jan 15 22:54:46 1996
++++ cdecl-2.5/cdecl.c	Mon Nov 20 11:46:06 2000
 @@ -63,6 +63,7 @@
  #include <stdio.h>
  #include <ctype.h>
@@ -8,3 +8,22 @@
  # include <stdlib.h>
  # include <stddef.h>
  # include <string.h>
+@@ -124,7 +125,6 @@
+ 
+ #if __STDC__
+   char *ds(char *), *cat(char *, ...), *visible(int);
+-  int getopt(int,char **,char *);
+   int main(int, char **);
+   int yywrap(void);
+   int dostdin(void);
+--- cdecl-2.5/Makefile.misc	Tue Jan 16 00:36:38 1996
++++ cdecl-2.5/Makefile	Sun Nov 19 23:08:45 2000
+@@ -36,7 +36,7 @@
+ 	lex cdlex.l && mv lex.yy.c cdlex.c
+ 
+ cdgram.c: cdgram.y
+-	yacc cdgram.y && mv y.tab.c cdgram.c
++	bison -y  cdgram.y && mv y.tab.c cdgram.c
+ 
+ test:
+ 	./cdecl < testset
