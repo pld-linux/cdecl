@@ -41,32 +41,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-
-%changelog
-* Mon Jun 07 1999 Jan Rêkorajski <baggins@pld.org.pl>
-  [2.5-11]
-- spec cleanup
-
-* Thu Apr 15 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.5-10]
-- added passing $RPM_OPT_FLAGS on compile time,
-- added gzipping man pages,
-- compile against ncurses.
-
-* Sun Mar 21 1999 Cristian Gafton <gafton@redhat.com> 
-- auto rebuild in the new build environment (release 9)
-
-* Wed Dec 30 1998 Cristian Gafton <gafton@redhat.com>
-- built for glibc 2.1
-
-* Sat Aug 15 1998 Jeff Johnson <jbj@redhat.com>
-- build root
-
-* Tue May 05 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Fri Oct 10 1997 Erik Troan <ewt@redhat.com>
-- built against readline lib w/ proper soname
-
-* Thu Jul 10 1997 Erik Troan <ewt@redhat.com>
-- built against glibc
