@@ -1,4 +1,7 @@
-Summary:	Programs for encoding and decoding C and C++ function declarations.
+Summary:	Programs for encoding and decoding C and C++ function declarations
+Summary(de):	Übersetzer von Deklarationen zwischen Englisch und C/C++
+Summary(fr):	Traducteur anglais <--> déclarations C/C++
+Summary(tr): 	Ýngilizceden C/C++ bildirimlerine çevirici
 Name:		cdecl
 Version:	2.5
 Release:	12
@@ -17,6 +20,18 @@ to translate English to C or C++ function declarations and vice versa.
 
 You should install the cdecl package if you intend to do C and/or C++
 programming.
+
+%description -l de
+Dies ist ein Paket zum Übersetzen von Englisch in C/C++ Funktionsanweisungen
+und umgekehrt. Nützlich für Programmierer.
+
+%description -l fr
+C'est un package pour traduire de l'anglais en déclarations de fonctions
+C/C++ et vice-versa. Utile pour les programmeurs.
+
+%description -l tr
+Ýngilizceden C/C++ bildirimlerine çeviri iþlemini ve tersini gerçekleþtirmek
+için kullanýlan bir pakettir. Programcýlar için kullanýþlýdýr.
 
 %prep
 %setup -q
