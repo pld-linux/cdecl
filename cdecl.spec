@@ -1,12 +1,13 @@
 Summary:	Programs for encoding and decoding C and C++ function declarations
 Summary(de):	Übersetzer von Deklarationen zwischen Englisch und C/C++
 Summary(fr):	Traducteur anglais <--> déclarations C/C++
-Summary(tr): 	Ýngilizceden C/C++ bildirimlerine çevirici
+Summary(tr):	Ýngilizceden C/C++ bildirimlerine çevirici
 Name:		cdecl
 Version:	2.5
-Release:	12
+Release:	13
 Copyright:	distributable
 Group:		Development/Tools
+Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 Source:		ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 Patch:		cdecl-misc.patch
@@ -19,16 +20,17 @@ The cdecl package includes the cdecl and c++decl utilities, which are used
 to translate English to C or C++ function declarations and vice versa.
 
 %description -l de
-Dies ist ein Paket zum Übersetzen von Englisch in C/C++ Funktionsanweisungen
-und umgekehrt. Nützlich für Programmierer.
+Dies ist ein Paket zum Übersetzen von Englisch in C/C++
+Funktionsanweisungen und umgekehrt. Nützlich für Programmierer.
 
 %description -l fr
 C'est un package pour traduire de l'anglais en déclarations de fonctions
 C/C++ et vice-versa. Utile pour les programmeurs.
 
 %description -l tr
-Ýngilizceden C/C++ bildirimlerine çeviri iþlemini ve tersini gerçekleþtirmek
-için kullanýlan bir pakettir. Programcýlar için kullanýþlýdýr.
+Ýngilizceden C/C++ bildirimlerine çeviri iþlemini ve tersini
+gerçekleþtirmek için kullanýlan bir pakettir. Programcýlar için
+kullanýþlýdýr.
 
 %prep
 %setup -q
@@ -40,7 +42,7 @@ make CFLAGS="$RPM_OPT_FLAGS -DUSE_READLINE -s" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/{bin,share/man/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 make BINDIR=$RPM_BUILD_ROOT%{_bindir} MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
 	install
