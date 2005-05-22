@@ -15,8 +15,8 @@ Group:		Development/Tools
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 # Source0-md5:	29895dab52e85b2474a59449e07b7996
 Patch0:		%{name}-misc.patch
-BuildRequires:	flex
 BuildRequires:	bison
+BuildRequires:	flex
 BuildRequires:	readline-devel >= 4.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -65,7 +65,7 @@ kullanýþlýdýr.
 %build
 bison -y cdgram.y && mv -f y.tab.c cdgram.c
 %{__make} \
-	CC=%{__cc} \
+	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} %{rpmldflags} -DUSE_READLINE" \
 	LIBS="-lreadline"
 
@@ -75,7 +75,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 %{__make} install \
 	BINDIR=$RPM_BUILD_ROOT%{_bindir} \
-	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
+	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
