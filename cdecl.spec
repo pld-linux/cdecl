@@ -1,12 +1,12 @@
 Summary:	Programs for encoding and decoding C and C++ function declarations
-Summary(de.UTF-8):   Übersetzer von Deklarationen zwischen Englisch und C/C++
-Summary(es.UTF-8):   Traductor inglés <--> declaraciones C/C++
-Summary(fr.UTF-8):   Traducteur anglais <--> déclarations C/C++
-Summary(pl.UTF-8):   Programy do kodowania i dekodowania deklaracji funkcji w C i C++
-Summary(pt_BR.UTF-8):   Tradutor inglês <--> declarações C/C++
-Summary(ru.UTF-8):   Транслятор English <--> декларации C/C++
-Summary(tr.UTF-8):   İngilizceden C/C++ bildirimlerine çevirici
-Summary(uk.UTF-8):   Транслятор English <--> декларації C/C++
+Summary(de.UTF-8):	Übersetzer von Deklarationen zwischen Englisch und C/C++
+Summary(es.UTF-8):	Traductor inglés <--> declaraciones C/C++
+Summary(fr.UTF-8):	Traducteur anglais <--> déclarations C/C++
+Summary(pl.UTF-8):	Programy do kodowania i dekodowania deklaracji funkcji w C i C++
+Summary(pt_BR.UTF-8):	Tradutor inglês <--> declarações C/C++
+Summary(ru.UTF-8):	Транслятор English <--> декларации C/C++
+Summary(tr.UTF-8):	İngilizceden C/C++ bildirimlerine çevirici
+Summary(uk.UTF-8):	Транслятор English <--> декларації C/C++
 Name:		cdecl
 Version:	2.5
 Release:	25
