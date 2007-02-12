@@ -1,12 +1,12 @@
 Summary:	Programs for encoding and decoding C and C++ function declarations
-Summary(de):	Übersetzer von Deklarationen zwischen Englisch und C/C++
-Summary(es):	Traductor inglés <--> declaraciones C/C++
-Summary(fr):	Traducteur anglais <--> déclarations C/C++
-Summary(pl):	Programy do kodowania i dekodowania deklaracji funkcji w C i C++
-Summary(pt_BR):	Tradutor inglês <--> declarações C/C++
-Summary(ru):	ôÒÁÎÓÌÑÔÏÒ English <--> ÄÅËÌÁÒÁÃÉÉ C/C++
-Summary(tr):	İngilizceden C/C++ bildirimlerine çevirici
-Summary(uk):	ôÒÁÎÓÌÑÔÏÒ English <--> ÄÅËÌÁÒÁÃ¦§ C/C++
+Summary(de.UTF-8):   Ãœbersetzer von Deklarationen zwischen Englisch und C/C++
+Summary(es.UTF-8):   Traductor inglÃ©s <--> declaraciones C/C++
+Summary(fr.UTF-8):   Traducteur anglais <--> dÃ©clarations C/C++
+Summary(pl.UTF-8):   Programy do kodowania i dekodowania deklaracji funkcji w C i C++
+Summary(pt_BR.UTF-8):   Tradutor inglÃªs <--> declaraÃ§Ãµes C/C++
+Summary(ru.UTF-8):   Ğ¢Ñ€Ğ°Ğ½ÑĞ»ÑÑ‚Ğ¾Ñ€ English <--> Ğ´ĞµĞºĞ»Ğ°Ñ€Ğ°Ñ†Ğ¸Ğ¸ C/C++
+Summary(tr.UTF-8):   Ä°ngilizceden C/C++ bildirimlerine Ã§evirici
+Summary(uk.UTF-8):   Ğ¢Ñ€Ğ°Ğ½ÑĞ»ÑÑ‚Ğ¾Ñ€ English <--> Ğ´ĞµĞºĞ»Ğ°Ñ€Ğ°Ñ†Ñ–Ñ— C/C++
 Name:		cdecl
 Version:	2.5
 Release:	25
@@ -25,38 +25,38 @@ The cdecl package includes the cdecl and c++decl utilities, which are
 used to translate English to C or C++ function declarations and vice
 versa.
 
-%description -l de
-Dies ist ein Paket zum Übersetzen von Englisch in C/C++
-Funktionsanweisungen und umgekehrt. Nützlich für Programmierer.
+%description -l de.UTF-8
+Dies ist ein Paket zum Ãœbersetzen von Englisch in C/C++
+Funktionsanweisungen und umgekehrt. NÃ¼tzlich fÃ¼r Programmierer.
 
-%description -l es
-Este es un paquete para traducir inglés para declaraciones de
-funciones C/C++ y viceversa. Útil para programadores.
+%description -l es.UTF-8
+Este es un paquete para traducir inglÃ©s para declaraciones de
+funciones C/C++ y viceversa. Ãštil para programadores.
 
-%description -l fr
-C'est un package pour traduire de l'anglais en déclarations de
+%description -l fr.UTF-8
+C'est un package pour traduire de l'anglais en dÃ©clarations de
 fonctions C/C++ et vice-versa. Utile pour les programmeurs.
 
-%description -l pl
-Pakiet cdecl zawiera narzêdzia cdecl oraz c++decl, których u¿ywa siê
-do t³umaczenia deklaracji funkcji C lub C++ na angielski i vice versa.
+%description -l pl.UTF-8
+Pakiet cdecl zawiera narzÄ™dzia cdecl oraz c++decl, ktÃ³rych uÅ¼ywa siÄ™
+do tÅ‚umaczenia deklaracji funkcji C lub C++ na angielski i vice versa.
 
-%description -l pt_BR
-Este é um pacote para traduzir inglês para declarações de funções
-C/C++ e vicer-versa. Útil para programadores.
+%description -l pt_BR.UTF-8
+Este Ã© um pacote para traduzir inglÃªs para declaraÃ§Ãµes de funÃ§Ãµes
+C/C++ e vicer-versa. Ãštil para programadores.
 
-%description -l ru
-éÓĞÏÌØÚÕÅÔÓÑ ÄÌÑ ÔÒÁÎÓÌÑÃÉÉ ÏÂÙŞÎÙÈ ÏĞÉÓÁÎÉÊ ÎÁ ÁÎÇÌÉÊÓËÏÍ ÑÚÙËÅ ×
-ÄÅËÌÁÒÁÃÉÉ ÆÕÎËÃÉÊ C/C++ É ÎÁÏÂÏÒÏÔ. ğÏÌÅÚÅÎ ÄÌÑ ĞÒÏÇÒÁÍÍÉÓÔÏ×.
+%description -l ru.UTF-8
+Ğ˜ÑĞ¿Ğ¾Ğ»ÑŒĞ·ÑƒĞµÑ‚ÑÑ Ğ´Ğ»Ñ Ñ‚Ñ€Ğ°Ğ½ÑĞ»ÑÑ†Ğ¸Ğ¸ Ğ¾Ğ±Ñ‹Ñ‡Ğ½Ñ‹Ñ… Ğ¾Ğ¿Ğ¸ÑĞ°Ğ½Ğ¸Ğ¹ Ğ½Ğ° Ğ°Ğ½Ğ³Ğ»Ğ¸Ğ¹ÑĞºĞ¾Ğ¼ ÑĞ·Ñ‹ĞºĞµ Ğ²
+Ğ´ĞµĞºĞ»Ğ°Ñ€Ğ°Ñ†Ğ¸Ğ¸ Ñ„ÑƒĞ½ĞºÑ†Ğ¸Ğ¹ C/C++ Ğ¸ Ğ½Ğ°Ğ¾Ğ±Ğ¾Ñ€Ğ¾Ñ‚. ĞŸĞ¾Ğ»ĞµĞ·ĞµĞ½ Ğ´Ğ»Ñ Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ¸ÑÑ‚Ğ¾Ğ².
 
-%description -l tr
-İngilizceden C/C++ bildirimlerine çeviri işlemini ve tersini
-gerçekleştirmek için kullanılan bir pakettir. Programcılar için
-kullanışlıdır.
+%description -l tr.UTF-8
+Ä°ngilizceden C/C++ bildirimlerine Ã§eviri iÅŸlemini ve tersini
+gerÃ§ekleÅŸtirmek iÃ§in kullanÄ±lan bir pakettir. ProgramcÄ±lar iÃ§in
+kullanÄ±ÅŸlÄ±dÄ±r.
 
-%description -l uk
-÷ÉËÏÒÉÓÔÏ×Õ¤ÔØÓÑ ÄÌÑ ĞÅÒÅËÌÁÄÕ ÏĞÉÓ¦× ÁÎÇÌ¦ÊÓØËÏÀ ÍÏ×ÏÀ × ÄÅËÌÁÒÁÃ¦§
-ÆÕÎËÃ¦Ê C/C++ ÔÁ ÎÁ×ĞÁËÉ. ëÏÒÉÓÎÉÊ ÄÌÑ ĞÒÏÇÒÁÍ¦ÓÔ¦×.
+%description -l uk.UTF-8
+Ğ’Ğ¸ĞºĞ¾Ñ€Ğ¸ÑÑ‚Ğ¾Ğ²ÑƒÑ”Ñ‚ÑŒÑÑ Ğ´Ğ»Ñ Ğ¿ĞµÑ€ĞµĞºĞ»Ğ°Ğ´Ñƒ Ğ¾Ğ¿Ğ¸ÑÑ–Ğ² Ğ°Ğ½Ğ³Ğ»Ñ–Ğ¹ÑÑŒĞºĞ¾Ñ Ğ¼Ğ¾Ğ²Ğ¾Ñ Ğ² Ğ´ĞµĞºĞ»Ğ°Ñ€Ğ°Ñ†Ñ–Ñ—
+Ñ„ÑƒĞ½ĞºÑ†Ñ–Ğ¹ C/C++ Ñ‚Ğ° Ğ½Ğ°Ğ²Ğ¿Ğ°ĞºĞ¸. ĞšĞ¾Ñ€Ğ¸ÑĞ½Ğ¸Ğ¹ Ğ´Ğ»Ñ Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ñ–ÑÑ‚Ñ–Ğ².
 
 %prep
 %setup -q
