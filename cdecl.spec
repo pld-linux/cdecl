@@ -9,7 +9,7 @@ Summary(tr.UTF-8):	İngilizceden C/C++ bildirimlerine çevirici
 Summary(uk.UTF-8):	Транслятор English <--> декларації C/C++
 Name:		cdecl
 Version:	2.5
-Release:	27
+Release:	28
 License:	distributable
 Group:		Development/Tools
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
