@@ -61,8 +61,8 @@ kullanışlıdır.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 bison -y cdgram.y && mv -f y.tab.c cdgram.c
