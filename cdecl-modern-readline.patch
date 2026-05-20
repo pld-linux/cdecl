@@ -1,0 +1,55 @@
+--- cdecl-2.5/cdecl.c.orig	2026-05-20 18:24:57.398574486 +0200
++++ cdecl-2.5/cdecl.c	2026-05-20 18:25:02.856222416 +0200
+@@ -90,6 +90,7 @@
+
+ #ifdef USE_READLINE
+ # include <readline/readline.h>
++# include <readline/history.h>
+   /* prototypes for functions related to readline() */
+   char * cdecl_getline();
+   char ** attempt_completion(char *, int, int);
+@@ -126,6 +127,7 @@
+ #if __STDC__
+   char *ds(char *), *cat(char *, ...), *visible(int);
+   int main(int, char **);
++  int yylex(void);
+   int yywrap(void);
+   int dostdin(void);
+   void mbcheck(void), dohelp(void), usage(void);
+@@ -139,7 +141,9 @@
+   void dodexplain(char*, char*, char*, char*);
+   void docexplain(char*, char*, char*, char*);
+   void setprogname(char *);
++  int namedkeyword(char *);
+   int dotmpfile(int, char**), dofileargs(int, char**);
++  int dotmpfile_from_string(char *);
+ #else
+   char *ds(), *cat(), *visible();
+   int getopt();
+@@ -399,7 +403,7 @@
+ {
+   char **matches = NULL;
+
+-  if (start == 0) matches = completion_matches(text, command_completion);
++  if (start == 0) matches = rl_completion_matches(text, (rl_compentry_func_t *)command_completion);
+
+   return matches;
+ }
+@@ -1245,14 +1249,15 @@
+ }
+
+ int main(argc, argv)
++int argc;
+ char **argv;
+ {
+     int c, ret = 0;
+
+ #ifdef USE_READLINE
+     /* install completion handlers */
+-    rl_attempted_completion_function = (CPPFunction *)attempt_completion;
+-    rl_completion_entry_function = (Function *)keyword_completion;
++    rl_attempted_completion_function = (rl_completion_func_t *)attempt_completion;
++    rl_completion_entry_function = (rl_compentry_func_t *)keyword_completion;
+ #endif
+
+     setprogname(argv[0]);

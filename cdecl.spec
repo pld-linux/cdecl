@@ -9,13 +9,14 @@ Summary(tr.UTF-8):	İngilizceden C/C++ bildirimlerine çevirici
 Summary(uk.UTF-8):	Транслятор English <--> декларації C/C++
 Name:		cdecl
 Version:	2.5
-Release:	31
+Release:	32
 License:	distributable
 Group:		Development/Tools
 Source0:	ftp://sunsite.unc.edu/pub/Linux/devel/lang/c/%{name}-%{version}.tar.gz
 # Source0-md5:	29895dab52e85b2474a59449e07b7996
 Patch0:		%{name}-misc.patch
 Patch1:		getline.patch
+Patch2:		%{name}-modern-readline.patch
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	readline-devel >= 4.2
@@ -63,12 +64,13 @@ kullanışlıdır.
 %setup -q
 %patch -P0 -p1
 %patch -P1 -p1
+%patch -P2 -p1
 
 %build
 bison -y cdgram.y && mv -f y.tab.c cdgram.c
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} %{rpmldflags} -DUSE_READLINE" \
+	CFLAGS="%{rpmcflags} %{rpmcppflags} %{rpmldflags} -DUSE_READLINE" \
 	LIBS="-lreadline"
 
 %install
